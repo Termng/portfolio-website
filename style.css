@@ -53,19 +53,90 @@
 
 /* CSS RULESETS */
 
+.bd{
+    margin-inline: 2.4rem;
+
+}
+
+
+/* THIS IS FOR THE NAVBAR */
+
+
+
+.logo{
+    width: 50px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+   
+
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.3rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    transition: ease-in-out 2.9ms;
+}
+
+
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+}
+
+
+.hide{
+    display: none;
+}
+
+
+
+.nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-block: 2rem;
+}
+
+
+
+
+
+
+/* END OF NAVBAR */
+
+.hey{
+    font-size: 2.2rem;
+    font-weight: 200;
+}
+
 .name {
     font-size: 5rem;
     font-weight: 600;
     animation: animate 5s linear infinite;
     background-image: linear-gradient(135deg, #ade367 0%, #33D2FF 25%, #6057dd 50%, #e02972 75%, #9845E8 100%);
-    background-size: 200%;
+    background-size: 300%;
     background-clip: text;
     color: transparent; /* Hide the text color */
 }
 
 @keyframes animate {
     100% {
-        background-position: 150%;
+        background-position: 100%;
     }
 }
 
@@ -80,6 +151,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 5rem;
 }
 
 .about{
@@ -169,13 +241,27 @@
     font-size: 1rem;
 }
 
-.exp :nth-child(3){
+.exp :nth-child(2){
     background-color:rgb(41, 41, 41);
     width: 120px;
     /* text-align: center; */
-    padding: 12px 0px;
+    padding: 15px 5px;
 }
 
+.exp p{
+    padding: 15px 5px;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+}
+
+
+.exp p:hover{
+    background-color:rgb(90, 90, 90);
+    width: 120px;
+    /* text-align: center; */
+    padding: 15px 5px;
+
+}
 
 
 
@@ -185,8 +271,10 @@
 }
 
 .date{
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 700;
+    color: #33D2FF;
+    
 }
 
 .w-exp{
@@ -196,7 +284,7 @@
     flex-wrap: wrap;
 }
 
-.company{
+.blue{
     color: #33D2FF;
     font-weight: 400;
 }
@@ -219,12 +307,317 @@
     justify-content: center;
     margin-block: 8rem;
 }
+
+.featured{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-block: 2rem;
+    border-bottom: 4px solid;
+    width: fit-content;
+    margin-left: 4.7rem;
+
+    border-bottom: 4px solid transparent; /* Set the border to a transparent color */
+    border-image: linear-gradient(-23deg, #e02972, #ffb133) 1;
+
+}
   
 
-.card{
+.image-card{
     width: 344px;
     height: 237px;
-    background-image: url();
+    background-image: url(/assets/Image51.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    transition: ease-in-out 0.2s;
+
+}
+
+.image-card:hover{
+    background-position: center;
+    background-size: 111%;
+    overflow: hidden;
+}
+
+
+.img2{
+    background-image: url(/assets/Image55.jpg);
+}
+.img3{
+    background-image: url(/assets/Image56.jpg);
+}
+.img4{
+    background-image: url(/assets/Image59.jpg);
+}
+.img5{
+    background-image: url(/assets/Image90.jpg);
+}
+.img6{
+    background-image: url(/assets/Image71.jpg);
+}
+.img7{
+    background-image: url(/assets/Image78.jpg);
+}
+.img8{
+    background-image: url(/assets/Image86.jpg);
+}
+.img9{
+    background-image: url(/assets/Image88.jpg);
+}
+
+
+.proj-name{
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.proj-desr{
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+
+
+.card-grid{
+    display: flex;
+    flex-direction: column;
+    width: 344px;
+    gap: 1.3rem;
+}
+
+.port{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-bottom: 4rem;
+}
+
+
+.showcase{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 200;
+    margin-block: 3rem;
+}
+
+
+.big{
+    font-size: 3rem;
+}
+
+.brands{
+    /* width: 600px; */
+    display: grid;
+    max-width: 600px;
+    margin: 0 auto;
+    grid-template-columns: repeat(6, 1fr);
+    place-items: center;
+    gap: 3rem;
+    
+}
+
+
+
+
+/* Section Testimonial */
+
+.testimonial{
+    margin-bottom: 4rem;
+}
+
+.testimonial h2{
+    text-align: center;
+    margin-block: 5rem;
+
+}
+
+.person{
+    font-size: 1.3rem;
+}
+
+
+.words{
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+
+
+.gold{
+    color: #ffb133;
+}
+
+.fa-star{
+    font-size: 0.6rem;
+
+}
+
+
+.img-container{
+    width:65px;
+    height: 65px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 54, 104);
+
+}
+
+
+.kate{
+    background-image: url(/assets/faces/face4.jpg);
+    background-size: cover;
+}
+.alison{
+    background-image: url(/assets/faces/face5.jpg);
+    background-size: cover;
+}
+.christopher{
+    background-image: url(/assets/faces/face2.jpg);
+    background-size: cover;
+}
+.frank{
+    background-image: url(/assets/faces/face1.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+.prof-name{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.review{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    place-items: center;  
+}
+
+
+/* This is the form section  */
+
+.reach-me{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    margin-bottom: 3rem;
+
+}
+
+.form-h2{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+.my-form{
+    max-width: 500px;
+  
+    /* background-color: #6057dd; */
+}
+
+.field{
+    width: 100%;
+    height: 40px;
+    background-color: none;
+    color:rgb(249, 249, 249);
+    background-color: rgb(34, 34, 34);
+    border: none;
+    border-bottom: 0.5px solid white;
+    outline: none;
+}
+
+
+
+label{
+    /* position: absolute; */
+    left: 0;
+    top: -30%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 500;
+    outline: none;
+
+
+}
+
+.input-wrap{
+    margin-top: 2rem;
+}
+
+.sub-btn{
+    width: 80%;
+    padding: 5px 20px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-inline: 2rem;
+    
+
+}
+
+.my-picture{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 2px solid rgb(108, 233, 255);
+    
+
+}
+
+.my-picture img{
+    object-fit: contain;
+    filter: grayscale();
+}
+
+
+
+/* THIS IS THE FOOTER SECTION AREA */
+
+
+.footer p{
+    margin-block: 1rem;
+    font-weight: 200;
+}
+
+
+.footer{
+    margin-top: 2.3rem;
+    background-color: #19191998;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    gap: 13rem;
+    padding-block: 2rem;
+    flex-wrap: wrap;
+    
+}
+
+
+.footer h4{
+    font-size: 1.3rem;
+    font-weight: 500;
+    animation: animate 5s linear infinite;
+    background-image: linear-gradient(135deg, #ade367 0%, #33D2FF 25%, #6057dd 50%, #e02972 75%, #9845E8 100%);
+    background-size: 300%;
+    background-clip: text;
+    color: transparent; /* Hide the text color */
+
 }
 
 
@@ -233,22 +626,109 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+/* MEDIA QUERIES START HERE. DO NOT WRITE ANY CODE BEYOND THIS LINE */
 
 
 @media (max-width: 880px){
+    body{
+        font-size: 12px;
+    }
+
+    .name{
+        font-size: 3rem;
+    }
+
+
     .w-exp{
         gap: 2rem;
     }
+    .image-card{
+        width: 261px;
+        height: 170px;
+    }
+    .card-grid{
+        width: 261px;
+        gap: 0.8rem;
+    }
+    .port{
+        gap: 2.3rem;
+    }
+ 
+}
+
+@media (max-width: 1183px){
+    .review{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .brands{
+        /* width: 600px; */
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    .img-container{
+        max-width: 50px;
+        max-height: 50px;
+        width: 80%;
+    }
+    .prof-name{
+        gap: 1rem;
+    }
+    .star{
+        display: none;
+    }
+
+    .my-picture{
+        width: 80%;
+        height: 80%;
+    }
+
+    .reach-me{
+        gap:2rem;
+    }
+    nav{
+        display: none;
+    }
+    .hide{
+        display: block;
+        font-size: 1.3rem;
+        /* width: 50px; */
+    }
+    .exp{
+        gap: 0.3rem;
+    }
+    .experience{
+        margin-block: 2rem;
+    }
+    .role{
+        font-size: 1.7rem;
+    }
+
+    .person{
+        font-size: 1rem;
+    }
+    .words{
+        font-size: 0.8rem;
+    }
+
+    .footer{
+        padding-inline: 2rem;
+        gap: 4rem;
+        align-items:start;
+        justify-content: left;
+    }
+
+    .featured{
+        text-align: left;
+        margin: 0;
+        margin-block: 2rem;
+    }
+  
 }
