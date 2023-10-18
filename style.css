@@ -637,8 +637,10 @@ label{
     animation: animate 5s linear infinite;
     background-image: linear-gradient(135deg, #ade367 0%, #33D2FF 25%, #6057dd 50%, #e02972 75%, #9845E8 100%);
     background-size: 300%;
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent; /* Hide the text color */
+    z-index: -1;
 
 }
 
