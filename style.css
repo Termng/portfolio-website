@@ -73,6 +73,8 @@ nav{
     align-items: center;
     justify-content: space-between;
     gap: 3rem;
+    transform: translateX(0px);
+    opacity: ;
    
 
 }
@@ -155,6 +157,9 @@ nav ul li a:hover{
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
+    opacity: 0;
+    transform: translateY(100px);
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
 .about{
@@ -523,6 +528,46 @@ nav ul li a:hover{
     place-items: center;  
 }
 
+/* This is the dropdown section */
+
+.dropdown-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 2rem;
+    flex-direction: column;
+
+}
+
+
+.dropdown::part(base){
+    background-color: rgba(54, 54, 54, 0.434);
+    border: none;
+    /* color: red; */
+    width: 800px;
+    margin-block: 1rem;
+}
+
+.dropdown::part(header){
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.dropdown::part(summary){
+    /* background-color: red; */
+    padding: .5rem;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* This is the form section  */
 
@@ -728,9 +773,7 @@ label{
     .exp{
         gap: 0.3rem;
     }
-    .experience{
-        /* margin-block: 2rem; */
-    }
+   
     .role{
         font-size: 1.7rem;
     }

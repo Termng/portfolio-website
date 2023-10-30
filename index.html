@@ -6,6 +6,13 @@
     <title>Torah Felix Portfolio</title>
     <script src="https://kit.fontawesome.com/fc0bcf5886.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+
+    <!-- SHOELACE CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+    <!-- SHOELACE CSS -->
+    
+
+
 </head>
 <body>
 <section class="bd">
@@ -233,6 +240,7 @@
             <i class="fa-brands fa-pinterest big"></i>
             <i class="fa-brands fa-stripe big"></i>
             <i class="fa-brands fa-pagelines big"></i>
+
             <i class="fa-brands fa-salesforce big"></i>
             <i class="fa-brands fa-xbox big"></i>
             <i class="fa-brands fa-fedex big"></i>
@@ -341,6 +349,8 @@
 
     </section>
 
+
+
     <section class="reach-me">
         <div class="contact">
             <form action="#" class="my-form">
@@ -369,14 +379,41 @@
 
     <hr>
 
-
-    
-    
-    
-    
-    
     
 </section>
+
+
+
+<section class="dropdown-flex">
+    <h2>Hey there</h2>
+    <div class="details-group-example dropdown ">
+        <sl-details class="dropdown" summary="Some Random Question ?" open>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </sl-details>
+      
+        <sl-details class="dropdown" summary="Who is Felix torah ?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </sl-details>
+      
+        <sl-details class="dropdown" summary="Where was He Born ?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </sl-details>
+        <sl-details class="dropdown" summary="Some random placeholder ? ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </sl-details>
+        <sl-details class="dropdown" summary="Another Random Question? ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </sl-details>
+      </div>
+</section>
+
+
+
 
 <section class="footer">
 
@@ -390,7 +427,7 @@
 
 
     <div>
-        <h4>Check out My articless</h4>
+        <h4>Check out My articles</h4>
         <p>Medium</p>
         <p>Toptal</p>
         <p>Dev.to</p>
@@ -413,8 +450,94 @@
 
 </section>
 
+    <!-- SHOELACE JS -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js"></script>
+    <!-- SHOELACE JS -->
 
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/CSSRulePlugin.min.js" integrity="sha512-+35N1KBHwTDnFOBSqO2nm/qsf5okaS74sUZu/rT/wlvuAfJ1hrAoGlWZip2l1LHB1q2i8B2k84Pb/NrC38bv8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+    <script>
+
+        let tl = gsap.timeline({defaults:{ease:"power4.inOut", duration: 2}});
+
+
+        tl.to('.about-me', {'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity:1, y : 0, duration: 2.2});
+
+
+        let nav = gsap.timeline({defaults:{ease:"power4.inOut", duration: 2}})
+        nav.from('nav', {opacity: 0, x: 300, duration: 2.4})
+        .from('.logo', {opacity: 0, y: -100, duration: 2.4}, '-=3' )
+
+        let cards = gsap.timeline({defaults:{ease:"expo.inOut", duration:4}})
+        cards.from('.links, .email, .linkedin, .behance, .github', {stagger:.1, duration: 3.2, opacity: 0, y:-50})
+
+
+        // This handles the scroll events
+
+        let sc = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.card-grid',
+                start: '1% 105%',
+                bottom: '50% center%',
+                scrub: true,
+                markers: false
+            }
+        }
+
+        )
+
+        sc.from('.card-grid', {
+            stagger: .1,
+            x: 200,
+            opacity: 0
+        })
+
+//Animations for the brand logos
+        let brands = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.brands',
+                start: '35% 85%',
+                bottom: 'top 85%',
+                scrub: true,
+            }
+        })
+
+        brands.from('.brands', {
+            stagger: .1,
+            x: -300,
+            // y: -50,
+            opacity: 0
+        })
+
+// End of Scroll animation 
+
+
+
+
+        let text = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.showcase',
+                start: 'top, center',
+                end: 'bottom, center',
+                scrub: true,
+            }
+        })
+
+        text.from('.showcase', {
+            // y: -50,
+            opacity: 0
+        })
+
+
+    </script>
 
 
 
