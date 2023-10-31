@@ -34,7 +34,7 @@
 
     <section class="about-me">
         <div class="about">
-            <h3 class="hey">Hey 👋🏼 I'm </h3>
+            <h3 class="hey">Hey there 👋🏼</h3>
             <h1 class="name">Torah Felix</h1>
             <p class="me">I'm a software engineer based in Toronto,
                 Canada and also a communication and journalism student.
@@ -398,7 +398,7 @@
         </sl-details>
       
         <sl-details class="dropdown" summary="Where was He Born ?">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          Lorem ipsum dolor sit amet, consectetur adipiscing elhvhvhit, sed do eiusmod tempor incididunt ut labore et dolore magna
           aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </sl-details>
         <sl-details class="dropdown" summary="Some random placeholder ? ">
@@ -462,6 +462,8 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"> </script>
 
 
     <script>
@@ -478,6 +480,14 @@
 
         let cards = gsap.timeline({defaults:{ease:"expo.inOut", duration:4}})
         cards.from('.links, .email, .linkedin, .behance, .github', {stagger:.1, duration: 3.2, opacity: 0, y:-50})
+
+        let expSection = gsap.timeline({defaults:{ease:"power4.inOut", duration: 2}})
+        nav.to('.exp', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', opacity: 1, duration: 2.1 } )
+        .from ('.jd-grid, .w-exp, .role, .date, .blue, .jd', { opacity: 0, x: -200, stagger: .2, duration: 0.9})
+
+
+
+
 
 
         // This handles the scroll events
@@ -535,6 +545,23 @@
             // y: -50,
             opacity: 0
         })
+
+
+
+
+
+        //This is for the writing text animation
+
+
+
+        var typed = new Typed('.name', {
+        strings: ["I'm an AltSchooler ^300","I love to code", "I'm Torah Felix"],
+        smartBackspace: true,
+        typeSpeed: 100,
+        showCursor: false,
+        cursorChar: '|',
+        });
+
 
 
     </script>

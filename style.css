@@ -74,7 +74,7 @@ nav{
     justify-content: space-between;
     gap: 3rem;
     transform: translateX(0px);
-    opacity: ;
+    /* opacity: ; */
    
 
 }
@@ -241,6 +241,9 @@ nav ul li a:hover{
     flex-direction: column;
     gap: 2.3rem;
     font-weight: 300;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    opacity: 0;
+
 }
 
 .exp :first-child{
@@ -536,7 +539,7 @@ nav ul li a:hover{
     justify-content: center;
     margin-block: 2rem;
     flex-direction: column;
-
+    
 }
 
 
