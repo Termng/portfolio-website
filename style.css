@@ -535,6 +535,7 @@ nav ul li a:hover{
 
 .dropdown{
     max-width: 700px;
+    width: 100%;
 }
 
 
@@ -544,6 +545,7 @@ nav ul li a:hover{
     justify-content: center;
     margin-block: 2rem;
     flex-direction: column;
+    
     
 
     
@@ -555,16 +557,21 @@ nav ul li a:hover{
     border: none;
     width: 100%;
     margin-block: 1rem;
+
 }
 
 .dropdown::part(header){
     font-size: .8rem;
     font-weight: 500;
+    gap: 8rem;
 }
 
 .dropdown::part(summary){
     padding: .5rem;
     border-radius: 10px;
+    width: 100%;
+
+
 }
 
 
