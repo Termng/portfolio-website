@@ -533,6 +533,11 @@ nav ul li a:hover{
 
 /* This is the dropdown section */
 
+.dropdown{
+    max-width: 700px;
+}
+
+
 .dropdown-flex{
     display: flex;
     align-items: center;
@@ -540,27 +545,31 @@ nav ul li a:hover{
     margin-block: 2rem;
     flex-direction: column;
     
+
+    
 }
 
 
 .dropdown::part(base){
     background-color: rgba(54, 54, 54, 0.434);
     border: none;
-    /* color: red; */
-    width: 800px;
+    width: 100%;
     margin-block: 1rem;
 }
 
 .dropdown::part(header){
-    font-size: 1.1rem;
+    font-size: .8rem;
     font-weight: 500;
 }
 
 .dropdown::part(summary){
-    /* background-color: red; */
     padding: .5rem;
     border-radius: 10px;
 }
+
+
+
+
 
 
 
